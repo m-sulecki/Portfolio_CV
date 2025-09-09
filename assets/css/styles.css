@@ -12,7 +12,7 @@
 
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), 40%);
-  --title-color: red;
+  --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 12%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 75%);
   --text-color-lighten: hsl(var(--hue), 8%, 90%);
@@ -62,12 +62,51 @@ h1, h2, h3 {
   padding-top: 3.5rem;
 }
 
+.profile_container {
+  row-gap: 2rem;
+}
+
+.profile__data {
+  display: grid; /* nie rozumiem */
+  text-align: center; /* nie rozumiem */
+}
+
 .profile__perfil {
   width: 100px;
   height: 100px;
+  background: linear-gradient(180deg,
+              hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
+              hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
   border-radius: 50%;
+  overflow: hidden; /* nie rozumiem */
+  display: flex; /* nie rozumiem */
+  align-items: flex-end; /* nie rozumiem */
+  justify-content: center; /* nie rozumiem */
 }
 
 .profile__perfil img {
   width: 100px;
+  height: 100px;
+}
+
+.profile__border {
+  border: 3.5px solid var(--first-color);
+  justify-self: center; /* nie rozumiem */
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  display: grid; /* nie rozumiem */
+  place-items: center; /* nie rozumiem */  /* to moze mi sie przydac zeby wstawic zdjecie DilutionSkids */
+  margin-bottom: 0.75rem;
+}
+
+.profile__name {
+  font-size: var(--h2-font-size);
+}
+
+.profile__profession {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }

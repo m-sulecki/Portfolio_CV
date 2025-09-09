@@ -1,0 +1,73 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+
+  --hue: 214;
+  --sat: 89%;
+  --lig: 52%;
+
+  --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--hue), var(--sat), 40%);
+  --title-color: red;
+  --text-color: hsl(var(--hue), 12%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 75%);
+  --text-color-lighten: hsl(var(--hue), 8%, 90%);
+  --text-color-darken: hsl(var(--hue), 8%, 65%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+  --img-color: hsl(0, 0%, 90%);
+
+/*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*=============== PROFILE ===============*/
+.profile {
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+.profile__perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile__perfil img {
+  width: 100px;
+}

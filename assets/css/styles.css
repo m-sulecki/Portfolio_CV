@@ -30,6 +30,16 @@
   --smaller-font-size: .75rem;
 }
 
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -49,11 +59,24 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
 /*=============== PROFILE ===============*/
@@ -121,4 +144,33 @@ h1, h2, h3 {
   font-size: 1.75rem;
   color: var(--title-color);
   transition: 0.3s;
+}
+
+.profile__social-link:hover{
+  color: var(--first-color);
+}
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+  .projects__content,
+  .projects_desc__img_group{
+    grid-template-columns: 332px;
+    justify-content: center;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

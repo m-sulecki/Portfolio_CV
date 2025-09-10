@@ -110,3 +110,15 @@ h1, h2, h3 {
   color: var(--text-color);
   margin-bottom: 1rem;
 }
+
+.profile__social{
+  display: flex; /* nie rozumiem */
+  justify-content: center; /* nie rozumiem */
+  column-gap: 0.75rem;
+}
+
+.profile__social-link{
+  font-size: 1.75rem;
+  color: var(--title-color);
+  transition: 0.3s;
+}

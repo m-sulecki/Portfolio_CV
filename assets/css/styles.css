@@ -228,6 +228,16 @@ a {
   background-color: var(--text-color-darken);
 }
 
+
+/*=============== FOOTER ===============*/
+.footer__copy{
+  display: block; /* nie rozumiem */
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -286,7 +296,7 @@ a {
     width: 120px;
     height: 120px;
   }
-/*
+
    .profile__profession{
     margin-bottom: 1.5rem;
   }
@@ -294,5 +304,10 @@ a {
    .profile__buttons{
     column-gap: 2rem;
   }
- */
+
+   .footer__copy{
+    margin: 4.5rem 0 2.5rem;
+  }
+
 }
+

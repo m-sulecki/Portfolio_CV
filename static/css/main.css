@@ -210,7 +210,6 @@ a {
 }
 
 .filters__button{
-  width: 200px;
   border: none;
   outline: none;
   padding: 1rem;
@@ -311,4 +310,3 @@ a {
   }
 
 }
-

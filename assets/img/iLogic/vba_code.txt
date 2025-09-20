@@ -1,0 +1,16 @@
+
+Private Function FlangeRevCut(flangeName, flangeNameDN)
+	folder = ThisDoc.Path
+	ExcelFile = folder & "/" & "flangesConfig.xlsx"
+	
+	GoExcel.Open(ExcelFile, "SizesSheet")	
+	GoExcel.FindRow(ExcelFile, "SizesSheet", "DN", "=", flangeNameDN)
+	
+	Num = Right(flangeName, 2)
+	
+	Parameter("PostTank", "f"& Num &"Len") = 175
+	Parameter("PostTank", "f"& Num &"IThk") = GoExcel.CurrentRowValue("flangeThickness")
+	Parameter("PostTank", "f"& Num &"OThk") = GoExcel.CurrentRowValue("flangeThickness")
+	Parameter("PostTank", "f"& Num &"ODia") = GoExcel.CurrentRowValue("flangeOuterD")
+	Parameter("PostTank", "f"& Num &"IDia") = GoExcel.CurrentRowValue("pipeD")	
+End Function

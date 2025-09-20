@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    {% block head %}   {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== REMIX ICONS ===============-->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+        rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>CV FLASK</title>
 </head>
+
+<!--=============== HEADER PROFILE ===============-->
+<header class="profile container">
+    <div class="profile__container grid">
+        <div class="profile__data">
+            <div class="profile__border">
+                <div class="profile__perfil">
+                    <img src="assets/img/Michal.Sulecki_vcard.jpg" alt="Lorem Ipsum">
+                </div>
+            </div>
+            <h2 class="profile__name">Michał Sułecki</h2>
+            <h2 class="profile__profession">Mechanical Engineer</h2>
+            <ul class="profile__social">
+                <li><a
+                        href="https://www.linkedin.com/in/michał-s-a8739910a"
+                        target="_blank" class="profile__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+                </li>
+                <li><a href="https://github.com/m-sulecki"
+                        target="_blank" class="profile__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="profile__buttons">
+            <a href="assets/pdf/MS-CV.pdf" class="button"
+                target="_blank">
+                Download CV <i class="ri-download-fill"></i>
+            </a>
+            <div class="profile__buttons-small">
+                <a
+                    href="https://api.whatsapp.com/send?phone=480000&text=Hello!"
+                    target="_blank"
+                    class="button button__small button__gray">
+                    <i class="ri-whatsapp-line"></i>
+                </a>
+                <a href="mailto:@outlook.com" target="_blank"
+                    class="button button__small button__gray">
+                    <i class="ri-mail-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
 <body>
-    {% block body %}   {% endblock %}
+<!--=============== MAIN ===============-->
+<main class="main">
+    <section class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content">
+            <a class="filters__button" href="{{ url_for('projects') }}">Projects</a>
+            <a class="filters__button" href="{{ url_for('skills') }}">Skills</a>
+            <a class="filters__button" href="{{ url_for('education') }}">Education</a>
+        </ul>
+    </section>
+    {% block projects %} {% endblock %}
+</main>
 </body>
-<footer class="footer container">
-    {% block footer %}   {% endblock %}
+<footer>
+    <span class="footer__copy">
+        &#169; Michał. All rights reserved.
+    </span>
 </footer>
 </html>

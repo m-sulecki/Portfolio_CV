@@ -4,7 +4,7 @@ app = Flask(__name__)
 projects_list = [
     {
         'project_title': 'Ductwork installation',
-        'project_url': 'img/VBAcode.png',
+        'project_url': 'img/SCR/SCR unit.png',
         'project_desc_para': 'The project required the layout of ductworks in the process plant based on P&ID diagrams. The design team included mechanical, electrical, chemical and structural engineers working in parallel on the design.'
     },
     {
@@ -23,19 +23,9 @@ projects_list = [
         'project_desc_para': 'The tooling was used to position components in the inter-operational spray washing process.'
     },
     {
-        'project_title': 'Buffer tank configurator',
-        'project_url': '/img/iLogic/Buffer Tank No. 1 - 200 m3_ilogic.png',
-        'project_desc_para': 'Lorem ipsum buffer tank'
-    },
-    {
         'project_title': 'Antenna redesign',
         'project_url': '/img/Carbon to Aluminium/antena.PNG',
         'project_desc_para': 'Antena lorem ipsum redesign'
-    },
-    {
-        'project_title': 'Extinguishing kit',
-        'project_url': '/img/Ocean Wind/1036507-R-XD-0001_v2.png',
-        'project_desc_para': 'The project consisted of the design of a fire extinguishing kit customised according to fire requirements in marine systems.'
     },
     {
         'project_title': 'Buffer tank configurator',

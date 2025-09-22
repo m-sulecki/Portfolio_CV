@@ -287,9 +287,24 @@ padding: 0px 5px 0px 5px;
   padding: 0.5rem;
 }
 
+.projects__card:hover .projects__modal{
+  background: none;
+  cursor: pointer;
+}
+
+.projects__card:hover .projects__subtitle{
+  background: hsla(var(--hue), 24%, 4%, .25);
+  box-shadow: 0px 0px 3px 3px hsla(var(--hue), 24%, 4%, .25);
+}
+
+.projects__card:hover .projects__title{
+  background: hsla(var(--hue), 24%, 4%, .25);
+  box-shadow: 0px 0px 3px 3px hsla(var(--hue), 24%, 4%, .25);
+}
+
 /*=============== FOOTER ===============*/
 .footer__copy{
-  display: block; /* nie rozumiem */
+  display: block;
   margin: 2.5rem 0 2rem;
   text-align: center;
   font-size: var(--smaller-font-size);
@@ -324,11 +339,14 @@ padding: 0px 5px 0px 5px;
 }
 
 @media screen and (min-width: 776px){
-
+  .projects__content,
+  .skills__content{
+    grid-template-columns: repeat(2, 332px);
+  }
 }
 
-/* For large devices */
 
+/* For large devices */
 @media screen and (min-width: 992px){
   .container{
     margin-left: auto;

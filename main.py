@@ -44,6 +44,59 @@ projects_list = [
     }
 ]
 
+software_skills_list = [
+    {
+        'skill_name': 'Autodesk Inventor',
+        'skill_level': 'Proficient'
+    },
+    {
+        'skill_name': 'Autodesk Vault',
+        'skill_level': 'Competent'
+    },
+    {
+        'skill_name': 'AutoCAD Plant 3D',
+        'skill_level': 'Competent'
+    },
+    {
+        'skill_name': 'Solidworks',
+        'skill_level': 'Proficient'
+    }
+]
+
+engineering_skills_list = [
+    {
+        'skill_name': 'Design for Manufacturing',
+        'skill_level': 'Proficient'
+    },
+    {
+        'skill_name': 'GD&T | ISO GPS',
+        'skill_level': 'Proficient'
+    },
+    {
+        'skill_name': 'ISO 9001',
+        'skill_level': 'Proficient'
+    }
+
+]
+
+education_list = [
+    {
+        'title': 'Mechanics and Machine Design',
+        'university': 'Warsaw University of Technology',
+        'icon': 'ri-tools-fill'
+    },
+    {
+        'title': 'Project management',
+        'university': 'Warsaw School of Economics',
+        'icon': 'ri-line-chart-fill'
+    },
+    {
+        'title': 'Python Developer',
+        'university': 'Coders Lab',
+        'icon': 'ri-computer-line'
+    }
+]
+
 posts = [
     {
         'author': 'Corey Schafer',
@@ -70,11 +123,11 @@ def projects():
 
 @app.route("/skills")
 def skills():
-    return "render_template('skills.html')"
+    return render_template('skills.html', software_skills_list=software_skills_list, engineering_skills_list=engineering_skills_list)
 
 @app.route("/education")
 def education():
-    return "render_template('education.html')"
+    return render_template('education.html', education_list=education_list)
 
 if __name__ == "__main__":
     app.run(debug=True)

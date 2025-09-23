@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block education %}
+<!--=============== EDUCATION ===============-->
+<div class="education__content grid" data-content id="education">
+    <div class="education__area">
+        <!-- <h3 class="education__title">
+            Backend Developer
+        </h3> -->
+        <div class="education__box">
+            <div class="education__group">
+                {% for edu in education_list %}
+                    <div class="education__data">
+                        <i class={{ edu.icon }}></i>
+                        <div>
+                            <h3 class="education__name">
+                                {{ edu.title }}
+                            </h3>
+                            <span class="education__level">{{ edu.university }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

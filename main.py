@@ -3,41 +3,49 @@ app = Flask(__name__)
 
 projects_list = [
     {
+        'project_number': '1',
         'project_title': 'Ductwork installation',
         'project_url': 'img/SCR/SCR unit.png',
         'project_desc_para': 'The project required the layout of ductworks in the process plant based on P&ID diagrams. The design team included mechanical, electrical, chemical and structural engineers working in parallel on the design.'
     },
     {
+        'project_number': '2',
         'project_title': 'Extinguishing kit',
         'project_url': '/img/Ocean Wind/1036507-R-XD-0001_v2.png',
         'project_desc_para': 'The project consisted of the design of a fire extinguishing kit customised according to fire requirements in marine systems.'
     },
     {
+        'project_number': '3',
         'project_title': 'Piping process installation',
         'project_url': '/img/DilutionSkids/Scenario 9.18.07.png',
         'project_desc_para': 'The project required the design of a complete process installation layout based on P&ID diagrams. The scope of the project included the design of pipe routing, specifying the position of the required instrumentation based on ATEX and pharmaceutical industry standards.'
     },
     {
+        'project_number': '4',
         'project_title': 'Washing pallet',
         'project_url': '/img/paletka_DS/438.0953_00.png',
         'project_desc_para': 'The tooling was used to position components in the inter-operational spray washing process.'
     },
     {
+        'project_number': '5',
         'project_title': 'Antenna redesign',
         'project_url': '/img/Carbon to Aluminium/antena.PNG',
         'project_desc_para': 'Antena lorem ipsum redesign'
     },
     {
+        'project_number': '6',
         'project_title': 'Buffer tank configurator',
         'project_url': '/img/iLogic/Buffer Tank No. 1 - 200 m3_ilogic.png',
         'project_desc_para': 'The project was to create an assembly configurator, which enabled the customer to generate new versions of the tank with different dimensions, number of process connections and their location in an user-friendly way.'
     },
     {
+        'project_number': '7',
         'project_title': 'Shrink connection',
         'project_url': '/img/Abaqus_interference_torque/torque.png',
         'project_desc_para': 'lorme ispum'
     },
     {
+        'project_number': '8',
         'project_title': 'Headphones',
         'project_url': '/img/Headphones/17861-110001.png',
         'project_desc_para': 'lorem ispum'
@@ -120,6 +128,10 @@ def index():
 @app.route("/projects")
 def projects():
     return render_template('projects.html', projects_list=projects_list)
+
+@app.route("/project_desc")
+def project_desc():
+    return render_template('project_desc.html')
 
 @app.route("/skills")
 def skills():

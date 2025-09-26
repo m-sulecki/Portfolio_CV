@@ -60,8 +60,8 @@
 
 <body>
 <!--=============== MAIN ===============-->
-<main class="main">
-    <section class="filters container">
+<main class="container">
+    <section class="filters">
         <!--=============== FILTERS TABS ===============-->
         <ul class="filters__content">
             <a class="filters__button" href="{{ url_for('projects') }}">Projects</a>
@@ -72,6 +72,7 @@
     {% block projects %} {% endblock %}
     {% block skills %} {% endblock %}
     {% block education %} {% endblock %}
+    {% block project_desc %} {% endblock %}
 </main>
 </body>
 <footer>

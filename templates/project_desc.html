@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block project_desc %}
+<div class="projects_desc" data-content id="project_1_desc">
+    <h3 class="projects_desc__title">Piping process installation</h3>
+    <div class="projects_desc__content grid">
+        <div class="project_desc_para">
+            The project required the design of a complete process installation layout based on P&ID diagrams. The scope of the project included the design of pipe routing, specifying the position of the required instrumentation based on ATEX and pharmaceutical industry standards.
+        </div>
+        <div class="projects_desc__card">
+            <img src="{{ url_for('static',filename='/img/DilutionSkids/DilutionSkids-1.jpg') }}" alt
+            class="projects_desc__img">
+        </div>
+        <div class="projects_desc__card">
+            <img src="{{ url_for('static',filename='/img/DilutionSkids/DilutionSkids-2.jpg') }}" alt
+            class="projects_desc__img">
+        </div>
+        <div class="project_desc_para">
+            The main software for the design was Autodesk Plant 3D.
+            Autodesk Navisworks was used for revision during the cross-disciplinary meetings.
+        </div>
+        <div class="projects_desc__card">
+            <img src="{{ url_for('static',filename='/img/DilutionSkids/1713963948795.jpg') }}" alt
+            class="projects_desc__img">
+        </div>
+    </div>
+</div>
+{% endblock %}

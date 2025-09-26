@@ -5,11 +5,13 @@
     <div class="projects__content grid" data-content id="projects">
         {% for project in projects_list %}
             <article class="projects__card">
-                <img src="{{ url_for('static',filename='{}'.format(project.project_url) ) }}">
-                <div class="projects__modal" data-target="#project_1_desc">
-                    <h3><span class="projects__title">{{ project.project_title }}</span></h3>
-                    <div><span class="projects__subtitle">Read more</span></div>
-                </div>
+                <a href="{{ url_for('project_desc') }}">
+                    <img src="{{ url_for('static',filename='{}'.format(project.project_url) ) }}">
+                    <div class="projects__modal" data-target="#project_1_desc">
+                        <h3><span class="projects__title">{{ project.project_title }}</span></h3>
+                        <div><span class="projects__subtitle">Read more</span></div>
+                    </div>
+                </a>
             </article>
         {% endfor %}
     </div>
